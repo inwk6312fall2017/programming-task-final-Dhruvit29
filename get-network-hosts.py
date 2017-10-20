@@ -27,8 +27,8 @@ import requests
 #import json library
 import json
 
-controller='sandboxapic.cisco.com'
-#controller='devnetapi.cisco.com/sandbox/apic_em'
+#controller='sandboxapic.cisco.com'
+controller='devnetapi.cisco.com/sandbox/apic_em'
 
 
 # put the ip address or dns of your apic-em controller in this url
@@ -67,3 +67,5 @@ print (json.dumps(response.json(), indent=4, separators=(',', ': ')))
 r_resp=response.json()
 
 print(r_resp["response"][0]["hostIp"])
+print(r_resp["response"][0]["hostMac"])
+print(r_resp["response"][0]["id"])
